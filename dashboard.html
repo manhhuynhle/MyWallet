@@ -1,0 +1,47 @@
+<section class="page-heading">
+  <div>
+    <h1>Tổng quan tài chính</h1>
+    <p>Xin chào! Cùng nhìn lại tình hình tài chính của bạn.</p>
+  </div>
+  <button class="btn btn-primary" data-action="new-transaction">
+    <i class="fa-solid fa-plus"></i> Thêm giao dịch
+  </button>
+</section>
+<section class="stats-grid" id="dashboard-stats"></section>
+<section class="content-grid">
+  <article class="panel panel-wide">
+    <div class="panel-heading">
+      <div>
+        <h2>Thu nhập & chi tiêu</h2>
+        <p>Thống kê theo ngày trong tháng đang chọn</p>
+      </div>
+      <input id="dashboard-month" type="month" class="control" />
+    </div>
+    <div id="dashboard-chart" class="chart-area"></div>
+  </article>
+  <article class="panel">
+    <div class="panel-heading">
+      <div>
+        <h2>Cơ cấu chi tiêu</h2>
+        <p>Phân bổ theo danh mục</p>
+      </div>
+    </div>
+    <div id="dashboard-pie" class="pie-layout"></div>
+  </article>
+  <article class="panel panel-wide">
+    <div class="panel-heading">
+      <h2>Giao dịch gần đây</h2>
+      <button class="btn btn-quiet" data-nav="transactions">
+        Xem tất cả <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    <div id="dashboard-recent"></div>
+  </article>
+  <article class="panel">
+    <div class="panel-heading">
+      <h2>Tiến độ ngân sách</h2>
+      <button class="btn btn-quiet" data-nav="budget">Chi tiết</button>
+    </div>
+    <div id="dashboard-budget"></div>
+  </article>
+</section>

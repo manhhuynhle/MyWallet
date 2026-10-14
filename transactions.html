@@ -1,0 +1,115 @@
+<section class="page-heading">
+  <div>
+    <h1>Quản lý giao dịch</h1>
+    <p>Theo dõi các khoản thu và chi của bạn tại một nơi.</p>
+  </div>
+  <button class="btn btn-primary" data-action="new-transaction">
+    <i class="fa-solid fa-plus"></i> Thêm giao dịch
+  </button>
+</section>
+<section class="stats-grid stats-strip" id="transaction-stats"></section>
+<section class="panel">
+  <div class="filters">
+    <input
+      id="transaction-search"
+      class="control"
+      placeholder="Tìm theo tên giao dịch..."
+    />
+    <select id="transaction-type-filter" class="control">
+      <option value="all">Tất cả loại</option>
+      <option value="income">Thu nhập</option>
+      <option value="expense">Chi tiêu</option>
+    </select>
+    <select id="transaction-category-filter" class="control">
+      <option value="all">Tất cả danh mục</option>
+    </select>
+    <input id="transaction-month-filter" class="control" type="month" />
+    <button class="btn btn-secondary" id="clear-transaction-filters">
+      Đặt lại
+    </button>
+  </div>
+  <div id="transaction-table"></div>
+</section>
+<dialog id="transaction-dialog" class="dialog">
+  <form id="transaction-form" class="dialog-form">
+    <div class="panel-heading">
+      <h2 id="transaction-dialog-title">Thêm giao dịch</h2>
+      <button
+        type="button"
+        class="icon-button"
+        data-action="close-transaction"
+        aria-label="Đóng"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <input type="hidden" id="transaction-id" />
+    <label
+      >Loại giao dịch<select id="transaction-type" class="control" required>
+        <option value="expense">Chi tiêu</option>
+        <option value="income">Thu nhập</option>
+      </select></label
+    >
+    <label
+      >Tên giao dịch<input
+        id="transaction-name"
+        class="control"
+        maxlength="100"
+        required
+        placeholder="Ví dụ: Ăn sáng"
+    /></label>
+    <div class="form-two">
+      <label
+        >Số tiền (VNĐ)<input
+          id="transaction-amount"
+          class="control"
+          type="number"
+          min="1"
+          step="1"
+          required
+          placeholder="25000" /></label
+      ><label
+        >Danh mục<select
+          id="transaction-category"
+          class="control"
+          required
+        ></select
+      ></label>
+    </div>
+    <div class="form-two">
+      <label
+        >Ngày giao dịch<input
+          id="transaction-date"
+          class="control"
+          type="date"
+          required /></label
+      ><label
+        >Phương thức<select id="transaction-payment" class="control">
+          <option>Tiền mặt</option>
+          <option>Chuyển khoản</option>
+          <option>Thẻ</option>
+          <option>Ví điện tử</option>
+          <option>Khác</option>
+        </select></label
+      >
+    </div>
+    <label
+      >Ghi chú<textarea
+        id="transaction-note"
+        class="control"
+        rows="3"
+        maxlength="250"
+        placeholder="Không bắt buộc"
+      ></textarea>
+    </label>
+    <div class="dialog-actions">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-action="close-transaction"
+      >
+        Hủy</button
+      ><button class="btn btn-primary" type="submit">Lưu giao dịch</button>
+    </div>
+  </form>
+</dialog>

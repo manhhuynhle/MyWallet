@@ -1,0 +1,46 @@
+<section class="page-heading">
+  <div>
+    <h1>Quản lý ngân sách</h1>
+    <p>Đặt giới hạn phù hợp cho từng khoản chi.</p>
+  </div>
+  <button class="btn btn-primary" data-action="edit-budgets">
+    <i class="fa-solid fa-sliders"></i> Thiết lập ngân sách
+  </button>
+</section>
+<section class="panel budget-overview" id="budget-overview"></section>
+<section class="notice" id="budget-notice" hidden></section>
+<section class="budget-grid" id="budget-cards"></section>
+<dialog id="budget-dialog" class="dialog">
+  <form id="budget-form" class="dialog-form">
+    <div class="panel-heading">
+      <h2>Thiết lập ngân sách tháng</h2>
+      <button
+        type="button"
+        class="icon-button"
+        data-action="close-budget"
+        aria-label="Đóng"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <label
+      >Tổng ngân sách (VNĐ)<input
+        class="control"
+        id="budget-total-input"
+        type="number"
+        min="0"
+        step="1000"
+        required
+    /></label>
+    <div id="budget-limit-fields" class="budget-limit-fields"></div>
+    <div class="dialog-actions">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-action="close-budget"
+      >
+        Hủy</button
+      ><button type="submit" class="btn btn-primary">Lưu ngân sách</button>
+    </div>
+  </form>
+</dialog>

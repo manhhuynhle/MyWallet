@@ -1,0 +1,56 @@
+<section class="page-heading">
+  <div>
+    <h1>Cài đặt</h1>
+    <p>Quản lý dữ liệu và bản sao lưu MyWallet.</p>
+  </div>
+</section>
+<section class="settings-grid">
+  <article class="panel">
+    <div class="settings-icon"><i class="fa-solid fa-shield-halved"></i></div>
+    <h2>Lưu trữ dữ liệu</h2>
+    <p>
+      Giao dịch và ngân sách được lưu trong trình duyệt này. Dữ liệu vẫn còn khi
+      tải lại trang hoặc đóng/mở trình duyệt, miễn là bạn không xóa dữ liệu
+      trang web.
+    </p>
+    <div class="settings-status" id="storage-status"></div>
+    <button class="btn btn-secondary" data-action="backup-json">
+      <i class="fa-solid fa-download"></i> Tải bản sao lưu JSON
+    </button>
+  </article>
+  <article class="panel">
+    <div class="settings-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+    <h2>Khôi phục dữ liệu</h2>
+    <p>
+      Chọn file JSON đã xuất từ MyWallet để khôi phục giao dịch và ngân sách. Dữ
+      liệu hiện tại sẽ được thay thế.
+    </p>
+    <label class="btn btn-secondary file-button"
+      ><i class="fa-solid fa-upload"></i> Chọn file sao lưu<input
+        id="restore-file"
+        type="file"
+        accept=".json,application/json"
+        hidden
+    /></label>
+  </article>
+  <article class="panel">
+    <div class="settings-icon"><i class="fa-solid fa-rotate"></i></div>
+    <h2>Tạo bản sao lưu nội bộ</h2>
+    <p>
+      Ứng dụng tự tạo bản sao dữ liệu gần nhất trong bộ nhớ trình duyệt mỗi khi
+      dữ liệu thay đổi.
+    </p>
+    <button class="btn btn-secondary" data-action="restore-local-backup">
+      Khôi phục bản sao nội bộ
+    </button>
+  </article>
+  <article class="panel danger-panel">
+    <div class="settings-icon">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <h2>Xóa toàn bộ dữ liệu</h2>
+    <p>Thao tác này không thể hoàn tác nếu bạn chưa tải bản sao lưu.</p>
+    <button class="btn btn-danger" data-action="clear-data">Xóa dữ liệu</button>
+  </article>
+</section>
+<div id="settings-message" class="inline-message" role="status"></div>

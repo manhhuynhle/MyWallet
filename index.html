@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>MyWallet</title>
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- logo -->
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h2>MyWallet</h2>
+        </div>
+        <!-- Menu điều hướng -->
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html" data-page="dashboard" class="active">
+                <i class="fa-solid fa-border-all"></i> Tổng quan
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="transactions.html" data-page="transactions">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i> Giao dịch
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="budget.html" data-page="budget">
+                <i class="fa-solid fa-wallet"></i> Ngân sách
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="reports.html" data-page="reports">
+                <i class="fa-solid fa-chart-simple"></i> Báo cáo
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="settings.html" data-page="settings">
+                <i class="fa-solid fa-gear"></i> Cài đặt
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Khu vực dưới cùng -->
+        <div class="sidebar-bottom">
+          <div class="budget-widget">
+            <i class="fa-solid fa-seedling"></i>
+            <h4>Chi tiêu có kế hoạch</h4>
+            <p>Bạn còn 650.000 VNĐ trong ngân sách tháng này.</p>
+          </div>
+          <div class="user-profile">
+            <img src="./img/avatar.jpg" alt="Avatar" class="avatar" />
+            <span class="user-name">Lê Mạnh Huỳnh</span>
+          </div>
+        </div>
+      </aside>
+      <!-- HEADER -->
+      <div class="main-content">
+        <header class="top-header">
+          <div class="header-left">
+            <p>Không gian tài chính cá nhân</p>
+          </div>
+          <div class="header-right">
+            <span class="current-date">Thứ Bảy, 10/10/2026</span>
+            <button class="btn-notification">
+              <i class="fa-regular fa-bell"></i>
+            </button>
+            <div class="user-avatar-small">LMH</div>
+          </div>
+        </header>
+        <main id="page-content" class="page-content">
+          <h1>Tổng quan tài chính</h1>
+          <p>Chào mừng đến với MyWallet.</p>
+        </main>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

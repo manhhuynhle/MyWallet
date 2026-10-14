@@ -1,0 +1,38 @@
+<section class="page-heading">
+  <div>
+    <h1>Báo cáo tài chính</h1>
+    <p>Hiểu dòng tiền và xây dựng thói quen chi tiêu tốt hơn.</p>
+  </div>
+  <button class="btn btn-primary" data-action="export-csv">
+    <i class="fa-solid fa-download"></i> Xuất CSV
+  </button>
+</section>
+<section class="report-controls panel">
+  <label
+    >Thời gian<select id="report-period" class="control">
+      <option value="month">Tháng này</option>
+      <option value="year">Năm nay</option>
+      <option value="all">Toàn bộ thời gian</option>
+    </select></label
+  ><label>Tháng<input id="report-month" class="control" type="month" /></label>
+</section>
+<section class="stats-grid" id="report-stats"></section>
+<section class="content-grid">
+  <article class="panel panel-wide">
+    <div class="panel-heading">
+      <div>
+        <h2>So sánh thu nhập và chi tiêu</h2>
+        <p>Tổng hợp theo tuần trong kỳ đã chọn</p>
+      </div>
+    </div>
+    <div id="report-chart" class="chart-area"></div>
+  </article>
+  <article class="panel">
+    <div class="panel-heading"><h2>Phân bổ chi tiêu</h2></div>
+    <div id="report-pie" class="pie-layout"></div>
+  </article>
+  <article class="panel panel-wide">
+    <div class="panel-heading"><h2>Danh mục chi tiêu cao nhất</h2></div>
+    <div id="report-categories"></div>
+  </article>
+</section>
